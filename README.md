@@ -12,3 +12,5 @@ You might have to copy the command_list.txt into the Relax Folder
 change into the Relax folder: cd Relax
 
 After running move_files_for_relax.py, use gen_submit_scripts.py from Relax folder. Change the path to the path of the command list and the number of commands per script. Generally, For relaxation you want only one command per script.
+
+Submit scripts need to be moved and submitted from each folder. 
