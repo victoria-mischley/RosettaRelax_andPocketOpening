@@ -50,6 +50,6 @@ if __name__ == '__main__':
     folder_path_str = args.folder_path
     working_directory = folder_path.parent
     list_new_file_paths =make_folders_and_copy_files(folder_path_str, working_directory)
-    make_command_list(list_new_file_paths)
+    make_command_list(list_new_file_paths, working_directory)
 
 
