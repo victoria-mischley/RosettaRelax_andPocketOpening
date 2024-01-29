@@ -1,6 +1,6 @@
 # RosettaRelax_andPocketOpening
 
-#RosettaRelax
+**#RosettaRelax**
 make folder: "Exemplar_Screen_01_17"
 1. Use move_files_for_relax.py. To run you must direct the script to the "Input_PDB" folder locaton
    --- python move_files_for_relax.py /expanse/lustre/projects/was136/vmischley/vmischley_04_28/Exemplar_Screen_01_17/Input_PDBs
