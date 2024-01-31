@@ -24,6 +24,7 @@ Make a folder with the top exemplars that you want to pocket open. "TopExemplars
 3. Change into the Pocket_Opening directory
 4. Copy the command_list into Pocket_Opening directory
 5. copy the pocket_opening_batch_submit_gen.py into Pocket_Opening directory
+***Make sure memory is set to at least 10GB. Otherwise not all jobs will run. 
 6. Submit pocket_opening_batch_submit_gen.py. It is important to keep chunk size in groups of 2 (ie 2, 4, 6) as two commands are neccessary to pocket_open each folder. The first command changes into the folder and the second one submits the command from that folder. This allows the output to be placed into the correct folders. 
 
 
