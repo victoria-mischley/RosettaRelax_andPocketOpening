@@ -27,4 +27,13 @@ Make a folder with the top exemplars that you want to pocket open. "TopExemplars
 ***Make sure memory is set to at least 10GB. Otherwise not all jobs will run. 
 6. Submit pocket_opening_batch_submit_gen.py. It is important to keep chunk size in groups of 2 (ie 2, 4, 6) as two commands are neccessary to pocket_open each folder. The first command changes into the folder and the second one submits the command from that folder. This allows the output to be placed into the correct folders. 
 
+**###After Pocket Opening**
+After pocket opening, regenerate exemplars with the origional file, relaxed file, and three lowest energy conformations of the pocket opened structure. After generating exemplars those exemplars will be used for druggability
+All of the nomenclature for pockets remains the same for the whole pipeline, you just need to change the path of the home directory that contains the folders: Relax, Pocket_Opening, and this script will make another folder within the home directory, Exemplars_after_Pocket_Opening
+This script will go thorugh the Pocket Opening folder, make new folders within the Exemplars_after_Pocket_Opening folde and then  will open the .score file to find the conformations with the 3 lowest energy conformation to each folder's respective folder within the Exemplars_after_Pocket_Opening folder. It will then copy the origional file and the corresponding Relaxed folder.
+Lastly, it wil make a command list to generate exemplars. 
+Step 1: run format_exemplar_screen_after_pocket_opening.py, this will output exemplars_after_pocket_opening_command_list.txt. Copy command_list into Exemplars_after_Pocket_Opening folder
+Since there are a total of five models per pocket, it is important to keep the chunk size at 6, so it the slurm submit script will change into the appropriate folder, and then run the exemplars for the five models within the same folder. 
+2. Run exemplars_after_pocket_opening_batch_submit_gen.py within the Exemplars_after_Pocket_Opening, just change the path to the command list. 
+
 
