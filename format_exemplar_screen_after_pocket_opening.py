@@ -33,7 +33,7 @@ def get_res_numbers(folder_name):
     folder_name_prefix_A = folder_name.split("_resA")[1]
     resA = folder_name_prefix_A.split("_resB")[0]
     folder_name_prefix_B = folder_name.split("_resB")[1]
-    resB = folder_name_prefix_B.split("_Exemplars")
+    resB = folder_name_prefix_B.split("_Exemplars")[0]
     return resA, resB
 
 def make_folders(pocket_opening_path):
