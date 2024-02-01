@@ -7,9 +7,9 @@ import pandas as pd
 working_directory = "/expanse/lustre/projects/was136/vmischley/vmischley_04_28/Exemplar_Screen_01_17"
 # working_directory = "/Users/mischlv/Downloads"
 relax_folder_home = f"{working_directory}/Relax"
-csv_file_location = f"{working_directory}/pocket_opening_residues.csv"
-pocket_opening_home = f"{working_directory}/Pocket_Opening"
-output_command_list= f"{working_directory}/pocket_opening_command_list.txt"
+csv_file_location = f"{working_directory}/pocket_opening_residues_missed.csv"
+pocket_opening_home = f"{working_directory}/Pocket_Opening_missed"
+output_command_list= f"{working_directory}/pocket_opening_command_list_missed.txt"
 
 def move_files_make_files():
     df = pd.read_csv(csv_file_location)
@@ -78,5 +78,6 @@ def make_command_list():
 if __name__ == '__main__':
     if not os.path.exists(pocket_opening_home):
         os.makedirs(pocket_opening_home)
-   # move_files_make_files()
+    move_files_make_files()
     make_command_list()
+                    
